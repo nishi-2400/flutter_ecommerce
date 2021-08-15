@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:list_tile_switch/list_tile_switch.dart';
 
-class UserInfoScreen extends StatelessWidget {
+class UserInfoScreen extends StatefulWidget {
+  @override
+  _UserInfoScreenState createState() => _UserInfoScreenState();
+}
+
+class _UserInfoScreenState extends State<UserInfoScreen> {
+  bool _value = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +28,29 @@ class UserInfoScreen extends StatelessWidget {
           userListTile(context, 'Phone number', 'SubTitle', 1),
           userListTile(context, 'Shipping address', 'SubTitle', 2),
           userListTile(context, 'Joined date', 'date', 3),
-          userListTile(context, 'Home', 'SubTitle', 4),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: userTitle('User Setting'),
+          ),
+          Divider(
+            thickness: 1,
+            color: Colors.grey,
+          ),
+          // ListTileSwitchによりリストタイルの生成
+          ListTileSwitch(
+            value: _value,
+            leading: Icon(Icons.nights_stay_outlined),
+            onChanged: (value) {
+              setState(() {
+                _value = value;
+              });
+            },
+            visualDensity: VisualDensity.comfortable,
+            switchType: SwitchType.cupertino,
+            switchActiveColor: Colors.indigo,
+            title: Text('Dark Theme'),
+          ),
+          userListTile(context, 'Logout', '', 4),
         ],
       ),
     );
