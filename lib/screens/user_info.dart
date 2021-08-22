@@ -1,5 +1,7 @@
+import 'package:ecommerce/provider/dark_theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:list_tile_switch/list_tile_switch.dart';
+import 'package:provider/provider.dart';
 
 class UserInfoScreen extends StatefulWidget {
   @override
@@ -7,10 +9,11 @@ class UserInfoScreen extends StatefulWidget {
 }
 
 class _UserInfoScreenState extends State<UserInfoScreen> {
-  bool _value = false;
-
   @override
   Widget build(BuildContext context) {
+    // テーマ変更用のDarkThemeProvider
+    final themeChange = Provider.of<DarkThemeProvider>(context);
+
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,13 +39,13 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
             thickness: 1,
             color: Colors.grey,
           ),
-          // ListTileSwitchによりリストタイルの生成
+          // ListTileSwitchによりリストタイルの生成:NightThemeの切り替えスイッチ
           ListTileSwitch(
-            value: _value,
+            value: themeChange.darkTheme,
             leading: Icon(Icons.nights_stay_outlined),
             onChanged: (value) {
               setState(() {
-                _value = value;
+                themeChange.darkTheme = value;
               });
             },
             visualDensity: VisualDensity.comfortable,
