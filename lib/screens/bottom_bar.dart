@@ -74,7 +74,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
               BottomNavigationBarItem(icon: Icon(MyIcons.home), tooltip: 'Home', label: 'Home'),
               BottomNavigationBarItem(icon: Icon(MyIcons.rss), tooltip: 'Feeds', label: 'Feeds'),
               BottomNavigationBarItem(activeIcon: null, icon: Icon(null), tooltip: 'Search', label: 'Search'),
-              BottomNavigationBarItem(icon: Icon(MyIcons.cart), tooltip: 'Cart', label: 'Cart'),
+              BottomNavigationBarItem(icon: Icon(MyIcons.bag), tooltip: 'Cart', label: 'Cart'),
               BottomNavigationBarItem(icon: Icon(MyIcons.user), tooltip: 'User', label: 'User'),
             ],
           ),
