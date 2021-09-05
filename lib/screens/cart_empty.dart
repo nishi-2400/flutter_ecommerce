@@ -1,4 +1,4 @@
-import 'package:ecommerce/consts/colars.dart';
+import 'package:ecommerce/consts/colors.dart';
 import 'package:ecommerce/provider/dark_theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
