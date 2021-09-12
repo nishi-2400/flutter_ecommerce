@@ -50,6 +50,7 @@ class _CartFullState extends State<CartFull> {
                             fontSize: 15,
                           ),
                           maxLines: 2,
+                          // overflow: 文字が親ウィジェットのサイズをオーバーした時の取扱い
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
@@ -111,7 +112,7 @@ class _CartFullState extends State<CartFull> {
                             child: Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: Icon(
-                                Icons.exposure_minus_1_rounded,
+                                Icons.remove,
                                 color: Colors.red,
                                 size: 22,
                               ),
@@ -133,7 +134,7 @@ class _CartFullState extends State<CartFull> {
                                 stops: [0.0, 0.7],
                               ),
                             ),
-                            child: Text('q', textAlign: TextAlign.center,),
+                            child: Text('154', textAlign: TextAlign.center,),
                           ),
                       ),
                       Material(
@@ -146,7 +147,7 @@ class _CartFullState extends State<CartFull> {
                             child: Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: Icon(
-                                Icons.plus_one_rounded,
+                                Icons.add,
                                 color: Colors.green,
                                 size: 22,
                               ),

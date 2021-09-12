@@ -7,4 +7,5 @@ class MyIcons {
  static IconData cart = Icons.add_shopping_cart;
  static IconData bag = Icons.shopping_bag;
  static IconData user = Icons.person;
+ static IconData trash = Icons.delete;
 }
