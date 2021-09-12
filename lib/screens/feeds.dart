@@ -1,3 +1,4 @@
+import 'package:ecommerce/widgets/feeds_products.dart';
 import 'package:flutter/material.dart';
 
 class FeedsScreen extends StatelessWidget {
@@ -5,7 +6,7 @@ class FeedsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Feeds'),
+        child: FeedProducts(),
       ),
     );
   }
