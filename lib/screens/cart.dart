@@ -1,8 +1,8 @@
+import 'package:ecommerce/consts/colors.dart';
 import 'package:ecommerce/consts/my_icons.dart';
-import 'package:ecommerce/screens/cart_empty.dart';
-import 'package:ecommerce/screens/cart_full.dart';
+import 'package:ecommerce/widgets/cart_empty.dart';
+import 'package:ecommerce/widgets/cart_full.dart';
 import 'package:flutter/material.dart';
-
 
 class CartScreen extends StatelessWidget {
   @override
@@ -42,21 +42,32 @@ class CartScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 2,
-              child: Material(
-                color: Colors.red,
-                borderRadius: BorderRadius.circular(30),
-                child: InkWell(
-                  onTap: () {},
+              child: Container(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Checkout',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Theme.of(context).textSelectionColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
+                  gradient: LinearGradient(
+                    colors: [
+                      ColorsContents.gradiendFStart,
+                      ColorsContents.gradiendLEnd,
+                    ],
+                    stops: [0.0, 0.7],
+                  ),
+                ),
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(30),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Checkout',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Theme.of(context).textSelectionColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                   ),
