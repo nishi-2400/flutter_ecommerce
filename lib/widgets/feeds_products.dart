@@ -9,8 +9,8 @@ class _FeedProductsState extends State<FeedProducts> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
-      height: 290,
+      width: 180,
+      height: 240,
       decoration: BoxDecoration(
         color: Theme.of(context).backgroundColor,
         borderRadius: BorderRadius.circular(6),
